@@ -6,7 +6,7 @@ class Config:
     # Configuração local (PostgreSQL local, comentada)
     # SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:password@localhost/task_manager'
     
-    # Configuração Supabase (Direct Connection)
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:xcCAq-kuUa.5p?!@db.ixktkhrsubpqctyhbjmb.supabase.co:5432/postgres'
+    # Configuração Supabase (usando variável de ambiente)
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'postgresql://postgres:xcCAq-kuUa.5p?!@db.ixktkhrsubpqctyhbjmb.supabase.co:5432/postgres')
     
     SQLALCHEMY_TRACK_MODIFICATIONS = False
