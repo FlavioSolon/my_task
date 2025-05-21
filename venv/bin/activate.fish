@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/flaviosolon/testes/my_flask_crud_solid_app/venv
+set -gx VIRTUAL_ENV /home/flaviosolon/testes/my_task/venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
