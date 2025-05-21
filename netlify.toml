@@ -1,0 +1,11 @@
+[build]
+  command = "pip install -r requirements.txt && flask db upgrade && echo 'Build complete'"
+  publish = "."
+  environment = { PYTHON_VERSION = "3.13.3" }
+
+[build.environment]
+  PIP_NO_BINARY = "psycopg2-binary"
+
+[[plugins]]
+  package = "@netlify/plugin-python-install"
+  inputs.packages = ["libpq-dev", "build-essential"]
